@@ -1,8 +1,3 @@
-/**
- * @file Defines eslint plugin rules.
- * @author Matt Rinker
- */
-
 /* eslint-disable no-magic-numbers */
 module.exports = {
   'import/no-extraneous-dependencies': [
@@ -19,47 +14,6 @@ module.exports = {
     },
   ],
   'init-declarations': 'off',
-  'jsdoc/check-access': 'warn',
-  'jsdoc/check-alignment': 'warn',
-  'jsdoc/check-examples': 'warn',
-  'jsdoc/check-indentation': 'warn',
-  'jsdoc/check-line-alignment': 'warn',
-  'jsdoc/check-param-names': 'warn',
-  'jsdoc/check-property-names': 'warn',
-  'jsdoc/check-syntax': 'warn',
-  'jsdoc/check-tag-names': 'warn',
-  'jsdoc/check-types': 'warn',
-  'jsdoc/check-values': 'warn',
-  'jsdoc/empty-tags': 'warn',
-  'jsdoc/implements-on-classes': 'warn',
-  'jsdoc/match-description': 'warn',
-  'jsdoc/newline-after-description': 'warn',
-  'jsdoc/no-bad-blocks': 'warn',
-  'jsdoc/no-defaults': 'warn',
-  'jsdoc/no-types': 'warn',
-  'jsdoc/no-undefined-types': 'warn',
-  'jsdoc/require-description': 'warn',
-  'jsdoc/require-description-complete-sentence': 'warn',
-  'jsdoc/require-example': 'warn',
-  'jsdoc/require-file-overview': 'warn',
-  'jsdoc/require-hyphen-before-param-description': 'warn',
-  'jsdoc/require-jsdoc': 'warn',
-  'jsdoc/require-param': 'warn',
-  'jsdoc/require-param-description': 'warn',
-  'jsdoc/require-param-name': 'warn',
-  'jsdoc/require-param-type': 'warn',
-  'jsdoc/require-property': 'warn',
-  'jsdoc/require-property-description': 'warn',
-  'jsdoc/require-property-name': 'warn',
-  'jsdoc/require-property-type': 'warn',
-  'jsdoc/require-returns': 'warn',
-  'jsdoc/require-returns-check': 'warn',
-  'jsdoc/require-returns-description': 'warn',
-  'jsdoc/require-returns-type': 'warn',
-  'jsdoc/require-throws': 'warn',
-  'jsdoc/require-yields': 'warn',
-  'jsdoc/require-yields-check': 'warn',
-  'jsdoc/valid-types': 'warn',
   'prefer-arrow/prefer-arrow-functions': [
     'warn',
     {
@@ -147,6 +101,14 @@ module.exports = {
   'unicorn/prefer-string-trim-start-end': 'error',
   'unicorn/prefer-ternary': ['error', 'only-single-line'],
   'unicorn/prefer-type-error': 'error',
-  'unicorn/prevent-abbreviations': 'error',
+  'unicorn/prevent-abbreviations': [
+    'error', {
+      replacements: {
+        num: false,
+        req: { request: false },
+        res: { response: false },
+      },
+    },
+  ],
   'unicorn/throw-new-error': 'error',
 };

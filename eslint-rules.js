@@ -1,8 +1,3 @@
-/**
- * @file Defines standard eslint rules.
- * @author Matt Rinker
- */
-
 /* eslint-disable no-magic-numbers */
 module.exports = {
   'accessor-pairs': ['error', { enforceForClassMembers: true }],
@@ -143,7 +138,7 @@ module.exports = {
   'no-else-return': 'error',
   'no-empty': 'error',
   'no-empty-character-class': 'error',
-  'no-empty-function': 'warn',
+  'no-empty-function': ['warn', { allow: ['arrowFunctions'] }],
   'no-empty-pattern': 'error',
   'no-eq-null': 'error',
   'no-eval': 'error',
@@ -192,7 +187,7 @@ module.exports = {
   'no-loss-of-precision': 'warn',
   'no-magic-numbers': [
     'warn', {
-      ignore: [1, 24, 60, 365, 1000],
+      ignore: [0, 1, 2, 24, 60, 365, 1000],
       ignoreArrayIndexes: true,
       ignoreDefaultValues: true,
     },
@@ -239,7 +234,7 @@ module.exports = {
   'no-this-before-super': 'error',
   'no-throw-literal': 'error',
   'no-trailing-spaces': ['error', { ignoreComments: true }],
-  'no-undef': ['error', { 'typeof': true }],
+  'no-undef': 'error',
   'no-undef-init': 'error',
   'no-underscore-dangle': [
     'error', {

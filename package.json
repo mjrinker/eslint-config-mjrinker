@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "A complete set of ESLint rules following the style guide created by Matt Rinker",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjrinker/eslint-config-mjrinker.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +21,6 @@
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^32.3.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-radar": "^0.2.1",
@@ -27,7 +30,6 @@
   "peerDependencies": {
     "eslint": ">= 7.23.0",
     "eslint-plugin-import": ">= 2.22.1",
-    "eslint-plugin-jsdoc": ">= 32.3.0",
     "eslint-plugin-jsx-a11y": ">= 6.4.1",
     "eslint-plugin-prefer-arrow": ">= 1.2.3",
     "eslint-plugin-radar": ">= 0.2.1",
