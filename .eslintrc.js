@@ -21,7 +21,6 @@ module.exports = {
   },
   plugins: [
     'import',
-    'jsdoc',
     'prefer-arrow',
     'radar',
     'sort-keys-fix',

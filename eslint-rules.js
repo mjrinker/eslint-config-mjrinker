@@ -46,11 +46,15 @@ module.exports = {
   'getter-return': 'error',
   'grouped-accessor-pairs': ['error', 'getBeforeSet'],
   'guard-for-in': 'error',
-  'id-length': ['error', { min: 3 }],
+  'id-length': [
+    'error', {
+      exceptions: ['id'],
+      min: 3,
+    },
+  ],
   'implicit-arrow-linebreak': 'error',
-  'indent': ['error', 2],
+  'indent': ['error', 2, { SwitchCase: 1 }],
   'init-declarations': 'off',
-
   'jsx-quotes': ['error', 'prefer-single'],
   'key-spacing': 'error',
   'keyword-spacing': 'error',
@@ -104,7 +108,7 @@ module.exports = {
   'max-params': ['error', { max: 5 }],
   'max-statements': 'off',
   'max-statements-per-line': ['error', { max: 1 }],
-  'multiline-comment-style': ['error', 'starred-block'],
+  'multiline-comment-style': ['error', 'bare-block'],
   'multiline-ternary': 'off',
   'new-cap': 'error',
   'new-parens': 'error',
@@ -324,7 +328,6 @@ module.exports = {
   'prefer-template': 'error',
   'quote-props': ['error', 'consistent-as-needed', { keywords: true }],
   'quotes': ['error', 'single', { avoidEscape: true }],
-
   'radix': 'error',
   'require-atomic-updates': 'error',
   'require-await': 'off',
@@ -334,13 +337,15 @@ module.exports = {
   'semi': 'error',
   'semi-spacing': 'error',
   'semi-style': ['error', 'last'],
-  'sort-imports': [
-    'error', {
-      allowSeparatedGroups: true,
-      ignoreCase: true,
-    },
-  ],
 
+  /* 'sort-imports': [
+       'error', {
+         allowSeparatedGroups: true,
+         ignoreCase: true,
+       },
+     ], */
+
+  'sort-imports': 'off',
   'sort-vars': 'error',
   'space-before-blocks': [
     'error', {
@@ -369,7 +374,6 @@ module.exports = {
   'template-curly-spacing': 'error',
   'template-tag-spacing': 'error',
   'unicode-bom': 'error',
-
   'use-isnan': 'error',
   'valid-typeof': ['error', { requireStringLiterals: true }],
   'vars-on-top': 'error',

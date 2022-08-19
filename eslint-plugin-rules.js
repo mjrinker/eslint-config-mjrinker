@@ -9,8 +9,20 @@ module.exports = {
   ],
   'import/order': [
     'error', {
+      'alphabetize': {
+        caseInsensitive: true,
+        order: 'asc',
+      },
       'groups': ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index', 'object'],
-      'newlines-between': 'always',
+      'newlines-between': 'ignore',
+      'pathGroups': [
+        {
+          group: 'external',
+          pattern: 'react',
+          position: 'before',
+        },
+      ],
+      'pathGroupsExcludedImportTypes': ['react'],
     },
   ],
   'init-declarations': 'off',
@@ -104,7 +116,12 @@ module.exports = {
   'unicorn/prevent-abbreviations': [
     'error', {
       replacements: {
+        args: false,
         num: false,
+        params: { parameters: false },
+        props: { properties: false },
+        ref: { reference: false },
+        refs: { references: false },
         req: { request: false },
         res: { response: false },
       },
